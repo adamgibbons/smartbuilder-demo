@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <title>SmartBuilder Demo</title>
+  </head>
+  <body>
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-8 ">
+            <h1>Lunch at the Cafe</h1>
+            <p>A friend who works for the US Department of Commerce is visiting your office to negotiate a potential deal. You want to take your friend to lunch at your office cafe.</p>
+
+            <div data-block class="question-block">
+
+              <legend>Your friend is</legend>
+              <fieldset>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer1" name="question1" class="custom-control-input">
+                  <label class="custom-control-label" for="answer1">a regular person</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer2" name="question1" class="custom-control-input" data-correct=1>
+                  <label class="custom-control-label" for="answer2">a US government official</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer3" name="question1" class="custom-control-input">
+                  <label class="custom-control-label" for="answer3">a non-US government official</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer4" name="question1" class="custom-control-input">
+                  <label class="custom-control-label" for="answer4">a government entity</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="display:none;">Submit</button>
+              </fieldset>
+
+              <div class="messaging">
+
+                <div role="alert" data-response="answer1" class="message incorrect-message" style="display:none;">
+                  <p>Incorrect</p>
+                  <p>Hint: Government officials include:</p>
+                  <ul>
+                    <li>foo</li>
+                    <li>bar</li>
+                    <li>baz</li>
+                  </ul>
+                  <p>Try again.</p>
+                </div>
+
+                <div role="alert" data-response="answer2" class="message correct-message" style="display:none;">
+                  <p>Correct!</p>
+                </div>
+
+                <div role="alert" data-response="answer3" class="message incorrect-message" style="display:none;">
+                  <p>Incorrect because you chose answer 3.</p>
+                  <p>Try again.</p>
+                </div>
+
+                <div role="alert" data-response="answer4" class="message incorrect-message" style="display:none;">
+                  <p>Incorrect because you chose answer 4.</p>
+                  <p>Try again.</p>
+                </div>
+              </div>
+            </div>
+
+            <div data-block class="question-block" style="display:none;">
+
+              <legend>Your friend is</legend>
+              <fieldset>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer5" name="question2" class="custom-control-input">
+                  <label class="custom-control-label" for="answer5">a regular person</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="answer6" name="question2" class="custom-control-input" data-correct=1>
+                  <label class="custom-control-label" for="answer6">a US government official</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="display:none;">Submit</button>
+              </fieldset>
+
+              <div class="messaging">
+
+                <div role="alert" data-response="answer5" class="message incorrect-message" style="display:none;">
+                  <p>Not correct.</p>
+                  <p>Hint: Government officials include:</p>
+                  <ul>
+                    <li>foo</li>
+                    <li>bar</li>
+                    <li>baz</li>
+                  </ul>
+                  <p>Try again.</p>
+                </div>
+
+                <div role="alert" data-response="answer6" class="message correct-message" style="display:none;">
+                  <p>Correct</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js"></script>
+
+  </body>
+</html>
